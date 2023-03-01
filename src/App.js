@@ -3,11 +3,11 @@ import { useToggle } from './useToggle';
 
 function App() {
  
-  const [isVisible, toggle] = useToggle();
+  const {state, toggle} = useToggle();
   return (
     <div className="App">
-         <button onClick={toggle}>{isVisible ? 'Hide' : 'Show'}</button>
-         {isVisible && <h1> Hidden text !</h1>}
+         <button onClick={toggle}>{state ? 'Hide' : 'Show'}</button>
+         {state && <h1> Hidden text !</h1>}
     </div>
   );
 }
